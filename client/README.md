@@ -22,11 +22,11 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 ```
 src/
 ├── components/
-│   ├── BookForm.js      # Form to add new books
+│   ├── BookForm.jsx     # Form to add new books
 │   ├── BookForm.css     # Form styling
-│   ├── BookList.js      # Display book collection
+│   ├── BookList.jsx     # Display book collection
 │   └── BookList.css     # List styling
-├── App.js               # Main application component
+├── App.jsx              # Main application component
 ├── App.css              # App styling
 ├── index.js             # React entry point
 └── index.css            # Global styles
@@ -34,17 +34,19 @@ src/
 
 ## 🎨 Features
 
-- **BookForm Component**
+- **BookForm Component** (`.jsx`)
   - Input fields for title, author, ISBN, year
   - Form validation
   - Success/error messages
   - State management with useState
 
-- **BookList Component**
+- **BookList Component** (`.jsx`)
   - Responsive card layout
   - Delete functionality with confirmation
   - Empty state handling
   - Loading state
+
+> **Note**: All React components use `.jsx` extension following strict SPA best practices. This clearly distinguishes JSX-containing files from plain JavaScript files.
 
 - **State Management**
   - useState for form inputs and book list
@@ -73,3 +75,4 @@ The proxy is configured in `package.json`:
 - React Hooks (useState, useEffect)
 - CSS3 (Flexbox, Grid, Media Queries)
 - Fetch API for HTTP requests
+- **JSX Extension**: All React components use `.jsx` for strict SPA compliance

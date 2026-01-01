@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import BookForm from './components/BookForm';
-import BookList from './components/BookList';
+import BookForm from './components/BookForm.jsx';
+import BookList from './components/BookList.jsx';
 
 function App() {
   // useState hook to manage book list

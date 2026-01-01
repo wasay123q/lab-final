@@ -11,6 +11,7 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) application for managing
 - **State Management**: React hooks (useState, useEffect) for efficient state handling
 - **Dynamic Updates**: Real-time UI updates without page reloads
 - **Component Architecture**: Reusable components with proper props passing
+- **Strict SPA Guidelines**: React components use `.jsx` extension for clarity and best practices
 
 ### Backend (Node.js + Express)
 - **RESTful API**: Clean API architecture with proper HTTP methods
@@ -31,11 +32,11 @@ library-management/
 │   │   └── index.html
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── BookForm.js           # Book entry form component
+│   │   │   ├── BookForm.jsx          # Book entry form component
 │   │   │   ├── BookForm.css          # Form styling
-│   │   │   ├── BookList.js           # Book list component
+│   │   │   ├── BookList.jsx          # Book list component
 │   │   │   └── BookList.css          # List styling
-│   │   ├── App.js                    # Main app component
+│   │   ├── App.jsx                   # Main app component
 │   │   ├── App.css                   # App styling
 │   │   ├── index.js                  # React entry point
 │   │   └── index.css                 # Global styles
@@ -190,8 +191,7 @@ The application is fully responsive and supports:
 ### Frontend
 - React 18
 - CSS3 (Flexbox & Grid)
-- Fetch API for HTTP requests
-
+- Fetch API for HTTP requests- **Note**: React components use `.jsx` extension following strict SPA best practices for clear differentiation between regular JavaScript and JSX syntax
 ### Backend
 - Node.js
 - Express.js 4
@@ -199,74 +199,4 @@ The application is fully responsive and supports:
 - CORS middleware
 - dotenv for environment variables
 
-## 🚀 Deployment on GitHub
 
-1. Initialize git repository (if not already done):
-```bash
-git init
-git add .
-git commit -m "Initial commit: Library Management System"
-```
-
-2. Create a new repository on GitHub
-
-3. Push to GitHub:
-```bash
-git remote add origin https://github.com/yourusername/library-management.git
-git branch -M main
-git push -u origin main
-```
-
-### Deployment Options
-
-**Frontend (React):**
-- Vercel
-- Netlify
-- GitHub Pages
-
-**Backend (Node.js):**
-- Heroku
-- Railway
-- Render
-- DigitalOcean
-
-**Database:**
-- MongoDB Atlas (Free tier available)
-
-## 👨‍💻 Development
-
-### Running in Development Mode
-
-1. Start MongoDB service
-2. Start backend server: `cd server && npm run dev`
-3. Start frontend: `cd client && npm start`
-
-### Building for Production
-
-```bash
-cd client
-npm run build
-```
-
-## 🔒 Security Considerations
-
-- Input validation on both client and server
-- MongoDB injection prevention via Mongoose
-- CORS properly configured
-- Environment variables for sensitive data
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-## 📧 Contact
-
-For questions or support, please open an issue on GitHub.
-
----
-
-**Made with ❤️ using the MERN Stack**

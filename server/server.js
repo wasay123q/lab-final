@@ -11,15 +11,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(express.json()); // Parse JSON request bodies
-app.use(cors()); // Enable CORS for cross-origin requests from frontend
+app.use(express.json()); 
+app.use(cors()); 
 
 // Connect to MongoDB
 connectDB();
 
-// ==================== API ROUTES ====================
 
-// GET /api/books - Retrieve all books from database
 app.get('/api/books', async (req, res) => {
   try {
     const books = await Book.find().sort({ createdAt: -1 }); // Sort by newest first
@@ -38,7 +36,7 @@ app.get('/api/books', async (req, res) => {
   }
 });
 
-// POST /api/books - Add a new book to the database
+// POST /api/books 
 app.post('/api/books', async (req, res) => {
   try {
     const { title, author, isbn, year } = req.body;
@@ -83,7 +81,7 @@ app.post('/api/books', async (req, res) => {
   }
 });
 
-// DELETE /api/books/:id - Remove a book by ID
+// DELETE /api/books/:id 
 app.delete('/api/books/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -120,7 +118,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// Start server on port 5000
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
